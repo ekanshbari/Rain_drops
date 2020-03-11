@@ -1,0 +1,58 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+  background: rgb(5, 4, 5);
+}
+.container {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  position: relative;
+}
+.drop {
+  display: inline-block;
+  float: left;
+  width: 22px;
+  height: 22px;
+  margin: 0 auto;
+  background: rgb(234, 249, 252);
+  position: absolute;
+  border-radius: 50% 1px 50% 50%;
+  transform: rotate(-45deg);
+  top: 50px;
+  animation: drip 0.9s infinite;
+}
+.drop-2 {
+  margin: 0 -50px;
+  width: 25px;
+  height: 25px;
+  animation: drip 0.45s infinite 0.2s;
+}
+.drop-3 {
+  margin: 0 50px;
+  width: 20px;
+  height: 20px;
+  animation: drip 0.45s infinite 0.1s;
+}
+@keyframes drip {
+  0% {
+    opacity: 0;
+    top: 50px;
+    width: 0;
+    height: 0;
+  }
+  50% {
+    top: 125px;
+  }
+  100% {
+    top: 250px;
+    opacity: 1;
+  }
+}
